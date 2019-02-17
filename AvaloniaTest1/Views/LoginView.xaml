@@ -1,0 +1,27 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="2*"></RowDefinition>
+      <RowDefinition Height="2*"></RowDefinition>
+      <RowDefinition Height="*"></RowDefinition>
+    </Grid.RowDefinitions>
+    <StackPanel Grid.Row="0" Margin="5,0,5,0">
+      <TextBlock Text="Login"/>
+      <TextBox Name="LoginTextBox" Text="{Binding Name}"/>
+    </StackPanel>
+    <StackPanel Grid.Row="1" Margin="5,0,5,0">
+      <TextBlock Text="Password"/>
+      <TextBox Name="PasswordTextBox" Text="{Binding Password}"/>
+    </StackPanel>
+    <Grid Grid.Row="2" >
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition></ColumnDefinition>
+        <ColumnDefinition></ColumnDefinition>
+      </Grid.ColumnDefinitions>
+      <Button Content="Log in" Grid.Column="0" Height="25" Width="50" Command="{Binding LoginCommand}">
+      </Button>
+      <Button Content="Sign up" Grid.Column="1" Height="25" Width="50" Command="{Binding SignUpCommand}"/>
+    </Grid>
+  </Grid>
+</UserControl>
