@@ -19,6 +19,8 @@ namespace AvaloniaExample.ViewModels
         public LoginViewModel(Storage storage)
         {
             Model = new LoginModel(storage);
+            Name = string.Empty;
+            Password = string.Empty;
         }
 
         public string Name

@@ -1,4 +1,5 @@
-﻿using AvaloniaExample.Managers;
+﻿using System;
+using AvaloniaExample.Managers;
 using StarDebris.Avalonia.MessageBox;
 
 namespace AvaloniaExample.Models
@@ -21,15 +22,18 @@ namespace AvaloniaExample.Models
         {
             if (!_storage.Users.ContainsKey(login))
             {
-                MessageBox messageBox = new MessageBox("Login or password is wrong");
-                messageBox.Show();
+                Console.WriteLine("Login or password is wrong");
+                //MessageBox messageBox = new MessageBox("Login or password is wrong");
+                //messageBox.Show();
             }
             else
             {
                 if (_storage.Users[login].Password != password)
                 {
-                    MessageBox messageBox = new MessageBox("Login or password is wrong");
-                    messageBox.Show();                }
+                    Console.WriteLine("Login or password is wrong");
+                    //MessageBox messageBox = new MessageBox("Login or password is wrong");
+                    //messageBox.Show();
+                }
                 else
                 {
                     NavigationManager.Instance.Navigate(ModesEnum.Main);

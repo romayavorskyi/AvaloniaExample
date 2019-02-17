@@ -17,22 +17,25 @@ namespace AvaloniaExample.Models
         {
             if (String.IsNullOrEmpty(login))
             {
-                MessageBox messageBox = new MessageBox("User login is empty");
-                messageBox.Show();
+                Console.WriteLine("User login is empty");
+                //MessageBox messageBox = new MessageBox("User login is empty");
+                //messageBox.Show();
                 return;
             }
 
             if (String.IsNullOrEmpty(password))
             {
-                MessageBox messageBox = new MessageBox("User password is empty");
-                messageBox.Show();
+                Console.WriteLine("User password is empty");
+                //MessageBox messageBox = new MessageBox("User password is empty");
+                //messageBox.Show();
                 return;
             }
 
             if (_storage.Users.ContainsKey(login))
             {
-                MessageBox messageBox = new MessageBox("User with entered login exists");
-                messageBox.Show();
+                Console.WriteLine("User with entered login exists");
+                //MessageBox messageBox = new MessageBox("User with entered login exists");
+                //messageBox.Show();
                 return;
             }
 
